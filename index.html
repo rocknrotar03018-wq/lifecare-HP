@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>社会福祉法人 きずな福祉会</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <a href="#top">
+          <span class="logo-mark">✦</span>
+          <div class="logo-text">
+            <span class="logo-main">きずな福祉会</span>
+            <span class="logo-sub">社会福祉法人</span>
+          </div>
+        </a>
+      </div>
+      <nav class="header-nav">
+        <ul>
+          <li><a href="#about">私たちについて</a></li>
+          <li><a href="#staff">職員紹介</a></li>
+          <li><a href="#message">理事長あいさつ</a></li>
+          <li><a href="#office">事業所紹介</a></li>
+          <li><a href="#access">アクセス</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="tel:0120-000-000" class="header-tel">
+          <span class="tel-icon">📞</span>
+          <div>
+            <span class="tel-free">無料相談</span>
+            <span class="tel-number">0120-000-000</span>
+          </div>
+        </a>
+        <a href="#contact" class="btn-header">お問い合わせ</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- モバイルナビ -->
+    <nav class="mobile-nav" id="mobileNav">
+      <ul>
+        <li><a href="#about" onclick="closeMenu()">私たちについて</a></li>
+        <li><a href="#staff" onclick="closeMenu()">職員紹介</a></li>
+        <li><a href="#message" onclick="closeMenu()">理事長あいさつ</a></li>
+        <li><a href="#office" onclick="closeMenu()">事業所紹介</a></li>
+        <li><a href="#access" onclick="closeMenu()">アクセス</a></li>
+        <li><a href="#contact" onclick="closeMenu()">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ファーストビュー -->
+  <section class="hero" id="top">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-sub">Social Welfare Corporation Kizuna Fukushikai</p>
+      <h1 class="hero-catch">
+        私たちは人と人との出会い<br>
+        <span class="accent">きずな</span>を大切にしています
+      </h1>
+      <p class="hero-desc">一人ひとりの「その人らしい生活」を支えるために、<br class="pc-br">地域に根ざしたあたたかいケアを提供しています。</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn-primary">無料相談・見学予約</a>
+        <a href="tel:0120-000-000" class="btn-outline">📞 今すぐ電話する</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- 私たちについて (mission / vision / value / strategy) -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">ABOUT US</span>
+        <h2 class="section-title">どんなことをしているの？</h2>
+        <p class="section-desc">きずな福祉会は、地域で生活するすべての人が安心して暮らせる社会を目指し、様々な福祉サービスを提供しています。</p>
+      </div>
+      <div class="mvvs-grid">
+        <div class="mvvs-card" data-type="mission">
+          <div class="mvvs-icon">🌱</div>
+          <h3>Mission <span class="mvvs-jp">使命</span></h3>
+          <p>地域の一人ひとりが「その人らしく」生きられる社会を実現するために、専門的かつ温かなケアを提供し続けます。高齢者・障がい者・子どもたちの生活を包括的に支援します。</p>
+        </div>
+        <div class="mvvs-card" data-type="vision">
+          <div class="mvvs-icon">🔭</div>
+          <h3>Vision <span class="mvvs-jp">未来像</span></h3>
+          <p>誰もが住み慣れた地域で安心して暮らし続けられる「共生社会」の実現。きずなでつながるコミュニティを育て、孤立ゼロの地域づくりを目指します。</p>
+        </div>
+        <div class="mvvs-card" data-type="value">
+          <div class="mvvs-icon">💎</div>
+          <h3>Value <span class="mvvs-jp">価値観</span></h3>
+          <ul>
+            <li><strong>尊厳：</strong>すべての人の尊厳と権利を尊重します</li>
+            <li><strong>誠実：</strong>利用者・家族・地域に誠実に向き合います</li>
+            <li><strong>連携：</strong>多職種・地域と連携して課題を解決します</li>
+            <li><strong>成長：</strong>職員が学び続け、サービスを高め続けます</li>
+          </ul>
+        </div>
+        <div class="mvvs-card" data-type="strategy">
+          <div class="mvvs-icon">🗺️</div>
+          <h3>Strategy <span class="mvvs-jp">戦略</span></h3>
+          <ul>
+            <li>在宅・施設サービスの一体的な提供体制の構築</li>
+            <li>ICT活用による業務効率化と質の向上</li>
+            <li>地域包括ケアシステムへの積極参画</li>
+            <li>職員研修の充実と働きやすい職場環境の整備</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 職員紹介 -->
+  <section class="staff" id="staff">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">OUR TEAM</span>
+        <h2 class="section-title">職員紹介</h2>
+        <p class="section-desc">利用者様の生活を支える、経験豊かな専門スタッフをご紹介します。</p>
+      </div>
+      <div class="staff-cards">
+        <div class="staff-card">
+          <div class="staff-avatar" style="background-color:#B2DFDB;">
+            <span class="avatar-initial">田</span>
+          </div>
+          <div class="staff-info">
+            <h3 class="staff-name">田中 恵子</h3>
+            <span class="staff-role">介護福祉士・サービス提供責任者</span>
+            <p class="staff-msg">「笑顔でいられるお手伝いをしたい」利用者様一人ひとりに寄り添った介護を心がけています。経験15年。</p>
+          </div>
+        </div>
+        <div class="staff-card">
+          <div class="staff-avatar" style="background-color:#C8E6C9;">
+            <span class="avatar-initial">山</span>
+          </div>
+          <div class="staff-info">
+            <h3 class="staff-name">山田 健太</h3>
+            <span class="staff-role">社会福祉士・相談員</span>
+            <p class="staff-msg">ご利用者様・ご家族のどんな悩みも一緒に考えます。地域資源と連携した支援計画を大切にしています。</p>
+          </div>
+        </div>
+        <div class="staff-card">
+          <div class="staff-avatar" style="background-color:#A5D6A7;">
+            <span class="avatar-initial">佐</span>
+          </div>
+          <div class="staff-info">
+            <h3 class="staff-name">佐藤 美咲</h3>
+            <span class="staff-role">看護師・医療連携担当</span>
+            <p class="staff-msg">医療と介護の橋渡し役として、安全で安心なサービスを提供します。健康管理のご相談もお気軽に。</p>
+          </div>
+        </div>
+        <div class="staff-card">
+          <div class="staff-avatar" style="background-color:#E8F5E9;">
+            <span class="avatar-initial">鈴</span>
+          </div>
+          <div class="staff-info">
+            <h3 class="staff-name">鈴木 大輔</h3>
+            <span class="staff-role">理学療法士・リハビリ担当</span>
+            <p class="staff-msg">「また歩きたい」「自分でできることを増やしたい」その想いを全力でサポートします。</p>
+          </div>
+        </div>
+        <div class="staff-card">
+          <div class="staff-avatar" style="background-color:#DCEDC8;">
+            <span class="avatar-initial">高</span>
+          </div>
+          <div class="staff-info">
+            <h3 class="staff-name">高橋 陽子</h3>
+            <span class="staff-role">ケアマネジャー・管理者</span>
+            <p class="staff-msg">介護保険・障害福祉のケアプランを作成します。制度や手続きのわからないことも遠慮なくご相談ください。</p>
+          </div>
+        </div>
+        <div class="staff-card">
+          <div class="staff-avatar" style="background-color:#F1F8E9;">
+            <span class="avatar-initial">中</span>
+          </div>
+          <div class="staff-info">
+            <h3 class="staff-name">中村 拓也</h3>
+            <span class="staff-role">介護職員・夜間担当リーダー</span>
+            <p class="staff-msg">夜間でも安心していただけるよう、チーム全体で連携しながら丁寧なケアを提供しています。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="staff-table-wrap">
+        <h3 class="staff-table-title">職員構成一覧</h3>
+        <table class="staff-table">
+          <thead>
+            <tr>
+              <th>職種</th>
+              <th>資格・専門</th>
+              <th>人数</th>
+              <th>主な担当業務</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>介護福祉士</td>
+              <td>介護福祉士国家資格</td>
+              <td>12名</td>
+              <td>身体介護・生活支援・サービス提供責任者</td>
+            </tr>
+            <tr>
+              <td>社会福祉士</td>
+              <td>社会福祉士国家資格</td>
+              <td>3名</td>
+              <td>相談支援・権利擁護・地域連携</td>
+            </tr>
+            <tr>
+              <td>看護師・准看護師</td>
+              <td>看護師/准看護師免許</td>
+              <td>4名</td>
+              <td>医療的ケア・健康管理・服薬管理</td>
+            </tr>
+            <tr>
+              <td>理学療法士</td>
+              <td>理学療法士国家資格</td>
+              <td>2名</td>
+              <td>機能訓練・リハビリテーション</td>
+            </tr>
+            <tr>
+              <td>ケアマネジャー</td>
+              <td>介護支援専門員証</td>
+              <td>3名</td>
+              <td>ケアプラン作成・サービス調整</td>
+            </tr>
+            <tr>
+              <td>介護職員</td>
+              <td>介護職員初任者研修修了</td>
+              <td>18名</td>
+              <td>日常生活支援・レクリエーション</td>
+            </tr>
+            <tr>
+              <td>事務職員</td>
+              <td>—</td>
+              <td>4名</td>
+              <td>受付・請求・庶務・経理</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 理事長あいさつ -->
+  <section class="message" id="message">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">MESSAGE</span>
+        <h2 class="section-title">理事長あいさつ</h2>
+      </div>
+      <div class="message-content">
+        <div class="message-photo">
+          <div class="photo-frame">
+            <div class="photo-placeholder">
+              <span class="photo-icon">👤</span>
+              <span class="photo-name">理事長<br>木村 誠一</span>
+            </div>
+          </div>
+          <div class="message-profile">
+            <h3>木村 誠一</h3>
+            <p class="profile-title">社会福祉法人 きずな福祉会 理事長</p>
+            <ul class="profile-career">
+              <li>1968年 大阪府生まれ</li>
+              <li>1992年 社会福祉法人○○会入職</li>
+              <li>2003年 社会福祉士・介護支援専門員取得</li>
+              <li>2008年 きずな福祉会設立・理事長就任</li>
+              <li>2015年 地域包括支援センター受託</li>
+              <li>現在に至る</li>
+            </ul>
+          </div>
+        </div>
+        <div class="message-text">
+          <p class="message-greeting">ごあいさつ</p>
+          <p>
+            きずな福祉会のホームページをご覧いただき、誠にありがとうございます。
+          </p>
+          <p>
+            私たちが大切にしているのは、「出会い」と「きずな」です。利用者様との出会い、ご家族との出会い、地域の皆様との出会い。その一つひとつの出会いが、より良い支援へとつながると信じています。
+          </p>
+          <p>
+            福祉の仕事は、人と人との関係の中にあります。制度やサービスはあくまで手段であり、本当に大切なのは「その人の生活がどうあるべきか」を一緒に考え、寄り添い続けることではないでしょうか。
+          </p>
+          <p>
+            きずな福祉会では、高齢者介護・障がい福祉・子育て支援など幅広い分野において、地域に根ざしたサービスを展開しています。「困ったときに頼れる存在」として、これからも地域の皆様とともに歩んでまいります。
+          </p>
+          <p>
+            何かお困りのことがございましたら、どうぞお気軽にご相談ください。スタッフ一同、皆様のお越しを心よりお待ちしております。
+          </p>
+          <p class="message-sign">
+            社会福祉法人 きずな福祉会<br>
+            理事長 <strong>木村 誠一</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 事業所紹介 -->
+  <section class="office" id="office">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">OUR SERVICES</span>
+        <h2 class="section-title">事業所紹介</h2>
+        <p class="section-desc">きずな福祉会では、地域のニーズに応えるため多様なサービスを展開しています。</p>
+      </div>
+      <div class="office-grid">
+        <div class="office-card">
+          <div class="office-icon">🏠</div>
+          <h3>訪問介護事業所<br><span>きずなホームヘルプ</span></h3>
+          <p>ホームヘルパーがご自宅を訪問し、身体介護・生活援助・通院介助など、在宅生活を総合的に支援します。</p>
+          <ul class="office-detail">
+            <li>📍 本部事業所内</li>
+            <li>🕐 7:00〜21:00（365日対応）</li>
+            <li>📋 介護保険・障害福祉対応</li>
+          </ul>
+        </div>
+        <div class="office-card">
+          <div class="office-icon">☀️</div>
+          <h3>通所介護事業所<br><span>きずなデイサービス</span></h3>
+          <p>日帰りで施設に通っていただき、入浴・食事・機能訓練・レクリエーションなどのサービスを提供します。</p>
+          <ul class="office-detail">
+            <li>📍 〒000-0000 大阪府○○市△△町1-2-3</li>
+            <li>🕐 9:00〜17:00（月〜土）</li>
+            <li>👥 定員：30名</li>
+          </ul>
+        </div>
+        <div class="office-card">
+          <div class="office-icon">🌙</div>
+          <h3>グループホーム<br><span>きずなの家</span></h3>
+          <p>認知症対応型共同生活介護。アットホームな環境でスタッフと入居者が共同生活を行います。</p>
+          <ul class="office-detail">
+            <li>📍 〒000-0001 大阪府○○市□□町4-5-6</li>
+            <li>🕐 24時間対応</li>
+            <li>🛏️ 定員：18名（2ユニット）</li>
+          </ul>
+        </div>
+        <div class="office-card">
+          <div class="office-icon">🤝</div>
+          <h3>居宅介護支援事業所<br><span>きずなケアプランセンター</span></h3>
+          <p>ケアマネジャーが介護保険のケアプランを作成します。サービス事業者との調整も一括してお任せください。</p>
+          <ul class="office-detail">
+            <li>📍 本部事業所内</li>
+            <li>🕐 9:00〜18:00（月〜金）</li>
+            <li>📞 無料相談実施中</li>
+          </ul>
+        </div>
+        <div class="office-card">
+          <div class="office-icon">♿</div>
+          <h3>障害福祉サービス事業所<br><span>きずなサポートセンター</span></h3>
+          <p>身体・知的・精神障がいのある方への就労継続支援・生活介護・相談支援などを提供します。</p>
+          <ul class="office-detail">
+            <li>📍 〒000-0002 大阪府○○市◇◇町7-8-9</li>
+            <li>🕐 9:00〜17:30（月〜土）</li>
+            <li>📋 障害者総合支援法対応</li>
+          </ul>
+        </div>
+        <div class="office-card">
+          <div class="office-icon">🌍</div>
+          <h3>地域包括支援センター<br><span>きずな地域包括</span></h3>
+          <p>高齢者の総合相談窓口。介護予防・権利擁護・ケアマネジャー支援など地域全体の福祉を支えます。</p>
+          <ul class="office-detail">
+            <li>📍 本部事業所内（市受託）</li>
+            <li>🕐 8:45〜17:15（月〜金）</li>
+            <li>📞 365日電話相談対応</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- アクセス・会社情報 -->
+  <section class="access" id="access">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">ACCESS</span>
+        <h2 class="section-title">アクセス・会社情報</h2>
+      </div>
+      <div class="access-content">
+        <div class="company-info">
+          <h3>法人情報</h3>
+          <table class="info-table">
+            <tbody>
+              <tr>
+                <th>法人名</th>
+                <td>社会福祉法人 きずな福祉会</td>
+              </tr>
+              <tr>
+                <th>所在地</th>
+                <td>〒000-0000<br>大阪府○○市△△町1丁目2番3号</td>
+              </tr>
+              <tr>
+                <th>電話番号</th>
+                <td><a href="tel:0120-000-000">0120-000-000</a>（フリーダイヤル）</td>
+              </tr>
+              <tr>
+                <th>FAX</th>
+                <td>00-0000-0001</td>
+              </tr>
+              <tr>
+                <th>メール</th>
+                <td><a href="mailto:info@kizuna-fukushikai.example">info@kizuna-fukushikai.example</a></td>
+              </tr>
+              <tr>
+                <th>設立</th>
+                <td>2008年4月1日</td>
+              </tr>
+              <tr>
+                <th>理事長</th>
+                <td>木村 誠一</td>
+              </tr>
+              <tr>
+                <th>職員数</th>
+                <td>46名（常勤・非常勤含む）</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3 class="hours-title">営業時間</h3>
+          <table class="info-table">
+            <tbody>
+              <tr>
+                <th>本部・相談窓口</th>
+                <td>月〜金 9:00〜18:00</td>
+              </tr>
+              <tr>
+                <th>電話相談</th>
+                <td>365日 8:00〜20:00</td>
+              </tr>
+              <tr>
+                <th>緊急連絡</th>
+                <td>24時間対応（登録利用者様）</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="access-note">
+            <p>🚃 <strong>電車でのアクセス：</strong>○○線「△△駅」より徒歩5分</p>
+            <p>🚌 <strong>バスでのアクセス：</strong>「△△町」停留所より徒歩2分</p>
+            <p>🚗 <strong>お車でのアクセス：</strong>駐車場あり（10台）</p>
+          </div>
+        </div>
+        <div class="map-area">
+          <h3>地図</h3>
+          <div class="map-embed">
+            <!-- Google Maps 埋め込みエリア（実際の運用時はiframeに差し替え） -->
+            <div class="map-placeholder">
+              <div class="map-pin">📍</div>
+              <p>きずな福祉会 本部</p>
+              <p class="map-address">大阪府○○市△△町1-2-3</p>
+              <a href="https://maps.google.com/?q=大阪府" target="_blank" rel="noopener" class="map-link">Google マップで見る →</a>
+            </div>
+            <!-- 実際の埋め込みコード例（下記コメントを外して使用）:
+            <iframe
+              src="https://www.google.com/maps/embed?pb=..."
+              width="100%" height="400" style="border:0;" allowfullscreen=""
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Web問い合わせフォーム -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">CONTACT</span>
+        <h2 class="section-title">お問い合わせ・無料相談予約</h2>
+        <p class="section-desc">見学・相談・サービス利用のご予約はこちらのフォームからもお申し込みいただけます。<br>通常2営業日以内にご連絡いたします。</p>
+      </div>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">ご希望の日程 <span class="required">必須</span></label>
+            <input type="date" id="date" name="date" required min="">
+          </div>
+          <div class="form-group">
+            <label for="time">ご希望の時間帯 <span class="required">必須</span></label>
+            <select id="time" name="time" required>
+              <option value="">選択してください</option>
+              <option value="morning">午前（9:00〜12:00）</option>
+              <option value="afternoon">午後（13:00〜17:00）</option>
+              <option value="evening">夕方（17:00〜19:00）</option>
+              <option value="anytime">時間帯はおまかせ</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">お名前 <span class="required">必須</span></label>
+            <input type="text" id="name" name="name" placeholder="山田 太郎" required>
+          </div>
+          <div class="form-group">
+            <label for="name-kana">フリガナ</label>
+            <input type="text" id="name-kana" name="name-kana" placeholder="ヤマダ タロウ">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="tel">電話番号 <span class="required">必須</span></label>
+            <input type="tel" id="tel" name="tel" placeholder="090-0000-0000" required>
+          </div>
+          <div class="form-group">
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="service">ご相談のサービス</label>
+          <select id="service" name="service">
+            <option value="">選択してください（任意）</option>
+            <option value="home-care">訪問介護</option>
+            <option value="day-service">通所介護（デイサービス）</option>
+            <option value="group-home">グループホーム</option>
+            <option value="care-plan">居宅介護支援（ケアプラン）</option>
+            <option value="disability">障害福祉サービス</option>
+            <option value="comprehensive">地域包括支援センター</option>
+            <option value="other">その他・わからない</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">ご相談内容・症状メモ <span class="required">必須</span></label>
+          <textarea id="message" name="message" rows="6" placeholder="例：86歳の母が一人暮らしで、最近足腰が弱ってきて生活が不安です。どのようなサービスが利用できるか相談したいです。" required></textarea>
+        </div>
+        <div class="form-group form-check">
+          <label class="checkbox-label">
+            <input type="checkbox" id="privacy" name="privacy" required>
+            <span><a href="#" onclick="return false;">個人情報の取り扱い</a>に同意します <span class="required">必須</span></span>
+          </label>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn-submit">送信する →</button>
+        </div>
+        <div class="form-success" id="formSuccess" style="display:none;">
+          <div class="success-icon">✅</div>
+          <h3>送信が完了しました</h3>
+          <p>お問い合わせありがとうございます。<br>2営業日以内に担当者よりご連絡いたします。</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="logo-mark">✦</span>
+          <div class="logo-text">
+            <span class="logo-main">きずな福祉会</span>
+            <span class="logo-sub">社会福祉法人</span>
+          </div>
+        </div>
+        <div class="footer-links">
+          <ul>
+            <li><a href="#about">私たちについて</a></li>
+            <li><a href="#staff">職員紹介</a></li>
+            <li><a href="#message">理事長あいさつ</a></li>
+            <li><a href="#office">事業所紹介</a></li>
+            <li><a href="#access">アクセス</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <a href="tel:0120-000-000" class="footer-tel">📞 0120-000-000</a>
+          <p class="footer-hours">電話受付：365日 8:00〜20:00</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-address">〒000-0000 大阪府○○市△△町1丁目2番3号</p>
+        <p class="copyright">© 2024 社会福祉法人 きずな福祉会 All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- スマホ用フローティングバー -->
+  <div class="floating-bar" id="floatingBar">
+    <a href="tel:0120-000-000" class="float-tel">
+      <span class="float-icon">📞</span>
+      <div>
+        <span class="float-label">無料電話相談</span>
+        <span class="float-num">0120-000-000</span>
+      </div>
+    </a>
+    <a href="#contact" class="float-reserve">
+      <span class="float-icon">📅</span>
+      <div>
+        <span class="float-label">予約・相談</span>
+        <span class="float-num">フォームへ</span>
+      </div>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
