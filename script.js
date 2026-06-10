@@ -1,4 +1,63 @@
 // ============================================
+// Slideshow
+// ============================================
+(function () {
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+  const prevBtn = document.querySelector('.slide-prev');
+  const nextBtn = document.querySelector('.slide-next');
+
+  if (!slides.length) return;
+
+  let current = 0;
+  let timer = null;
+  const INTERVAL = 5000;
+
+  function goTo(index) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function startAuto() {
+    timer = setInterval(() => goTo(current + 1), INTERVAL);
+  }
+
+  function resetAuto() {
+    clearInterval(timer);
+    startAuto();
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      goTo(parseInt(dot.dataset.index));
+      resetAuto();
+    });
+  });
+
+  if (prevBtn) prevBtn.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+  if (nextBtn) nextBtn.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+
+  // タッチスワイプ
+  let touchStartX = 0;
+  const slideshow = document.querySelector('.slideshow');
+  if (slideshow) {
+    slideshow.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    slideshow.addEventListener('touchend', e => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        goTo(diff > 0 ? current + 1 : current - 1);
+        resetAuto();
+      }
+    }, { passive: true });
+  }
+
+  startAuto();
+})();
+
+// ============================================
 // Header scroll effect
 // ============================================
 const header = document.getElementById('header');

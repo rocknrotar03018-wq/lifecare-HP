@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>社会福祉法人 きずな福祉会</title>
+  <title>株式会社ライフケア</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -14,10 +14,13 @@
     <div class="header-inner">
       <div class="header-logo">
         <a href="#top">
-          <span class="logo-mark">✦</span>
-          <div class="logo-text">
-            <span class="logo-main">きずな福祉会</span>
-            <span class="logo-sub">社会福祉法人</span>
+          <img src="images/logo.png" alt="LiFE CARE ライフケア" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="logo-text-fallback" style="display:none;">
+            <span class="logo-mark">✦</span>
+            <div class="logo-text">
+              <span class="logo-main">ライフケア</span>
+              <span class="logo-sub">株式会社</span>
+            </div>
           </div>
         </a>
       </div>
@@ -25,18 +28,18 @@
         <ul>
           <li><a href="#about">私たちについて</a></li>
           <li><a href="#staff">職員紹介</a></li>
-          <li><a href="#message">理事長あいさつ</a></li>
+          <li><a href="#message">代表あいさつ</a></li>
           <li><a href="#office">事業所紹介</a></li>
           <li><a href="#access">アクセス</a></li>
           <li><a href="#contact">お問い合わせ</a></li>
         </ul>
       </nav>
       <div class="header-actions">
-        <a href="tel:0120-000-000" class="header-tel">
+        <a href="tel:026-269-8740" class="header-tel">
           <span class="tel-icon">📞</span>
           <div>
-            <span class="tel-free">無料相談</span>
-            <span class="tel-number">0120-000-000</span>
+            <span class="tel-free">お電話はこちら</span>
+            <span class="tel-number">026-269-8740</span>
           </div>
         </a>
         <a href="#contact" class="btn-header">お問い合わせ</a>
@@ -50,7 +53,7 @@
       <ul>
         <li><a href="#about" onclick="closeMenu()">私たちについて</a></li>
         <li><a href="#staff" onclick="closeMenu()">職員紹介</a></li>
-        <li><a href="#message" onclick="closeMenu()">理事長あいさつ</a></li>
+        <li><a href="#message" onclick="closeMenu()">代表あいさつ</a></li>
         <li><a href="#office" onclick="closeMenu()">事業所紹介</a></li>
         <li><a href="#access" onclick="closeMenu()">アクセス</a></li>
         <li><a href="#contact" onclick="closeMenu()">お問い合わせ</a></li>
@@ -58,11 +61,30 @@
     </nav>
   </header>
 
-  <!-- ファーストビュー -->
+  <!-- ファーストビュー（スライドショー） -->
   <section class="hero" id="top">
-    <div class="hero-bg"></div>
+    <div class="slideshow">
+      <div class="slide active" style="background-image: url('images/slide1.jpg');">
+        <div class="slide-overlay"></div>
+      </div>
+      <div class="slide" style="background-image: url('images/slide2.jpg');">
+        <div class="slide-overlay"></div>
+      </div>
+      <div class="slide" style="background-image: url('images/slide3.jpg');">
+        <div class="slide-overlay"></div>
+      </div>
+      <!-- スライドインジケーター -->
+      <div class="slide-dots">
+        <button class="dot active" data-index="0" aria-label="スライド1"></button>
+        <button class="dot" data-index="1" aria-label="スライド2"></button>
+        <button class="dot" data-index="2" aria-label="スライド3"></button>
+      </div>
+      <!-- 矢印ボタン -->
+      <button class="slide-prev" aria-label="前へ">&#8249;</button>
+      <button class="slide-next" aria-label="次へ">&#8250;</button>
+    </div>
     <div class="hero-content">
-      <p class="hero-sub">Social Welfare Corporation Kizuna Fukushikai</p>
+      <p class="hero-sub">LiFE CARE Co., Ltd.</p>
       <h1 class="hero-catch">
         私たちは人と人との出会い<br>
         <span class="accent">きずな</span>を大切にしています
@@ -70,7 +92,7 @@
       <p class="hero-desc">一人ひとりの「その人らしい生活」を支えるために、<br class="pc-br">地域に根ざしたあたたかいケアを提供しています。</p>
       <div class="hero-cta">
         <a href="#contact" class="btn-primary">無料相談・見学予約</a>
-        <a href="tel:0120-000-000" class="btn-outline">📞 今すぐ電話する</a>
+        <a href="tel:026-269-8740" class="btn-outline">📞 今すぐ電話する</a>
       </div>
     </div>
     <div class="hero-scroll">
@@ -85,7 +107,7 @@
       <div class="section-header">
         <span class="section-label">ABOUT US</span>
         <h2 class="section-title">どんなことをしているの？</h2>
-        <p class="section-desc">きずな福祉会は、地域で生活するすべての人が安心して暮らせる社会を目指し、様々な福祉サービスを提供しています。</p>
+        <p class="section-desc">ライフケアは、地域で生活するすべての人が安心して暮らせる社会を目指し、様々な福祉サービスを提供しています。</p>
       </div>
       <div class="mvvs-grid">
         <div class="mvvs-card" data-type="mission">
@@ -253,29 +275,29 @@
     </div>
   </section>
 
-  <!-- 理事長あいさつ -->
+  <!-- 代表あいさつ -->
   <section class="message" id="message">
     <div class="container">
       <div class="section-header">
         <span class="section-label">MESSAGE</span>
-        <h2 class="section-title">理事長あいさつ</h2>
+        <h2 class="section-title">代表あいさつ</h2>
       </div>
       <div class="message-content">
         <div class="message-photo">
           <div class="photo-frame">
             <div class="photo-placeholder">
               <span class="photo-icon">👤</span>
-              <span class="photo-name">理事長<br>木村 誠一</span>
+              <span class="photo-name">代表取締役<br>木村 誠一</span>
             </div>
           </div>
           <div class="message-profile">
             <h3>木村 誠一</h3>
-            <p class="profile-title">社会福祉法人 きずな福祉会 理事長</p>
+            <p class="profile-title">株式会社ライフケア 代表取締役</p>
             <ul class="profile-career">
-              <li>1968年 大阪府生まれ</li>
+              <li>1968年 長野県生まれ</li>
               <li>1992年 社会福祉法人○○会入職</li>
               <li>2003年 社会福祉士・介護支援専門員取得</li>
-              <li>2008年 きずな福祉会設立・理事長就任</li>
+              <li>2008年 株式会社ライフケア設立・代表就任</li>
               <li>2015年 地域包括支援センター受託</li>
               <li>現在に至る</li>
             </ul>
@@ -284,7 +306,7 @@
         <div class="message-text">
           <p class="message-greeting">ごあいさつ</p>
           <p>
-            きずな福祉会のホームページをご覧いただき、誠にありがとうございます。
+            株式会社ライフケアのホームページをご覧いただき、誠にありがとうございます。
           </p>
           <p>
             私たちが大切にしているのは、「出会い」と「きずな」です。利用者様との出会い、ご家族との出会い、地域の皆様との出会い。その一つひとつの出会いが、より良い支援へとつながると信じています。
@@ -293,14 +315,14 @@
             福祉の仕事は、人と人との関係の中にあります。制度やサービスはあくまで手段であり、本当に大切なのは「その人の生活がどうあるべきか」を一緒に考え、寄り添い続けることではないでしょうか。
           </p>
           <p>
-            きずな福祉会では、高齢者介護・障がい福祉・子育て支援など幅広い分野において、地域に根ざしたサービスを展開しています。「困ったときに頼れる存在」として、これからも地域の皆様とともに歩んでまいります。
+            ライフケアでは、高齢者介護・障がい福祉・子育て支援など幅広い分野において、長野市を拠点に地域に根ざしたサービスを展開しています。「困ったときに頼れる存在」として、これからも地域の皆様とともに歩んでまいります。
           </p>
           <p>
             何かお困りのことがございましたら、どうぞお気軽にご相談ください。スタッフ一同、皆様のお越しを心よりお待ちしております。
           </p>
           <p class="message-sign">
-            社会福祉法人 きずな福祉会<br>
-            理事長 <strong>木村 誠一</strong>
+            株式会社ライフケア<br>
+            代表取締役 <strong>木村 誠一</strong>
           </p>
         </div>
       </div>
@@ -313,65 +335,65 @@
       <div class="section-header">
         <span class="section-label">OUR SERVICES</span>
         <h2 class="section-title">事業所紹介</h2>
-        <p class="section-desc">きずな福祉会では、地域のニーズに応えるため多様なサービスを展開しています。</p>
+        <p class="section-desc">ライフケアでは、地域のニーズに応えるため多様なサービスを展開しています。</p>
       </div>
       <div class="office-grid">
         <div class="office-card">
           <div class="office-icon">🏠</div>
-          <h3>訪問介護事業所<br><span>きずなホームヘルプ</span></h3>
+          <h3>訪問介護事業所<br><span>ライフケア訪問介護</span></h3>
           <p>ホームヘルパーがご自宅を訪問し、身体介護・生活援助・通院介助など、在宅生活を総合的に支援します。</p>
           <ul class="office-detail">
-            <li>📍 本部事業所内</li>
+            <li>📍 長野市大字栗田2009番地 BBBビル3F</li>
             <li>🕐 7:00〜21:00（365日対応）</li>
             <li>📋 介護保険・障害福祉対応</li>
           </ul>
         </div>
         <div class="office-card">
           <div class="office-icon">☀️</div>
-          <h3>通所介護事業所<br><span>きずなデイサービス</span></h3>
+          <h3>通所介護事業所<br><span>ライフケアデイサービス</span></h3>
           <p>日帰りで施設に通っていただき、入浴・食事・機能訓練・レクリエーションなどのサービスを提供します。</p>
           <ul class="office-detail">
-            <li>📍 〒000-0000 大阪府○○市△△町1-2-3</li>
+            <li>📍 長野市内（詳細はお問い合わせください）</li>
             <li>🕐 9:00〜17:00（月〜土）</li>
             <li>👥 定員：30名</li>
           </ul>
         </div>
         <div class="office-card">
           <div class="office-icon">🌙</div>
-          <h3>グループホーム<br><span>きずなの家</span></h3>
+          <h3>グループホーム<br><span>ライフケアの家</span></h3>
           <p>認知症対応型共同生活介護。アットホームな環境でスタッフと入居者が共同生活を行います。</p>
           <ul class="office-detail">
-            <li>📍 〒000-0001 大阪府○○市□□町4-5-6</li>
+            <li>📍 長野市内（詳細はお問い合わせください）</li>
             <li>🕐 24時間対応</li>
             <li>🛏️ 定員：18名（2ユニット）</li>
           </ul>
         </div>
         <div class="office-card">
           <div class="office-icon">🤝</div>
-          <h3>居宅介護支援事業所<br><span>きずなケアプランセンター</span></h3>
+          <h3>居宅介護支援事業所<br><span>ライフケアプランセンター</span></h3>
           <p>ケアマネジャーが介護保険のケアプランを作成します。サービス事業者との調整も一括してお任せください。</p>
           <ul class="office-detail">
-            <li>📍 本部事業所内</li>
+            <li>📍 長野市大字栗田2009番地 BBBビル3F</li>
             <li>🕐 9:00〜18:00（月〜金）</li>
             <li>📞 無料相談実施中</li>
           </ul>
         </div>
         <div class="office-card">
           <div class="office-icon">♿</div>
-          <h3>障害福祉サービス事業所<br><span>きずなサポートセンター</span></h3>
+          <h3>障害福祉サービス事業所<br><span>ライフケアサポート</span></h3>
           <p>身体・知的・精神障がいのある方への就労継続支援・生活介護・相談支援などを提供します。</p>
           <ul class="office-detail">
-            <li>📍 〒000-0002 大阪府○○市◇◇町7-8-9</li>
+            <li>📍 長野市内（詳細はお問い合わせください）</li>
             <li>🕐 9:00〜17:30（月〜土）</li>
             <li>📋 障害者総合支援法対応</li>
           </ul>
         </div>
         <div class="office-card">
           <div class="office-icon">🌍</div>
-          <h3>地域包括支援センター<br><span>きずな地域包括</span></h3>
+          <h3>地域包括支援センター<br><span>ライフケア地域包括</span></h3>
           <p>高齢者の総合相談窓口。介護予防・権利擁護・ケアマネジャー支援など地域全体の福祉を支えます。</p>
           <ul class="office-detail">
-            <li>📍 本部事業所内（市受託）</li>
+            <li>📍 長野市大字栗田2009番地 BBBビル3F</li>
             <li>🕐 8:45〜17:15（月〜金）</li>
             <li>📞 365日電話相談対応</li>
           </ul>
@@ -389,35 +411,35 @@
       </div>
       <div class="access-content">
         <div class="company-info">
-          <h3>法人情報</h3>
+          <h3>会社情報</h3>
           <table class="info-table">
             <tbody>
               <tr>
-                <th>法人名</th>
-                <td>社会福祉法人 きずな福祉会</td>
+                <th>会社名</th>
+                <td>株式会社ライフケア</td>
               </tr>
               <tr>
                 <th>所在地</th>
-                <td>〒000-0000<br>大阪府○○市△△町1丁目2番3号</td>
+                <td>〒380-0928<br>長野市大字栗田2009番地 BBBビル3F</td>
               </tr>
               <tr>
                 <th>電話番号</th>
-                <td><a href="tel:0120-000-000">0120-000-000</a>（フリーダイヤル）</td>
+                <td><a href="tel:026-269-8740">026-269-8740</a></td>
               </tr>
               <tr>
                 <th>FAX</th>
-                <td>00-0000-0001</td>
+                <td>026-269-8741</td>
               </tr>
               <tr>
                 <th>メール</th>
-                <td><a href="mailto:info@kizuna-fukushikai.example">info@kizuna-fukushikai.example</a></td>
+                <td><a href="mailto:info@lifecare-nagano.example">info@lifecare-nagano.example</a></td>
               </tr>
               <tr>
                 <th>設立</th>
                 <td>2008年4月1日</td>
               </tr>
               <tr>
-                <th>理事長</th>
+                <th>代表取締役</th>
                 <td>木村 誠一</td>
               </tr>
               <tr>
@@ -444,22 +466,21 @@
             </tbody>
           </table>
           <div class="access-note">
-            <p>🚃 <strong>電車でのアクセス：</strong>○○線「△△駅」より徒歩5分</p>
-            <p>🚌 <strong>バスでのアクセス：</strong>「△△町」停留所より徒歩2分</p>
-            <p>🚗 <strong>お車でのアクセス：</strong>駐車場あり（10台）</p>
+            <p>🚃 <strong>電車でのアクセス：</strong>JR長野駅より車で約10分</p>
+            <p>🚌 <strong>バスでのアクセス：</strong>「栗田」バス停より徒歩約3分</p>
+            <p>🚗 <strong>お車でのアクセス：</strong>駐車場あり</p>
           </div>
         </div>
         <div class="map-area">
           <h3>地図</h3>
           <div class="map-embed">
-            <!-- Google Maps 埋め込みエリア（実際の運用時はiframeに差し替え） -->
             <div class="map-placeholder">
               <div class="map-pin">📍</div>
-              <p>きずな福祉会 本部</p>
-              <p class="map-address">大阪府○○市△△町1-2-3</p>
-              <a href="https://maps.google.com/?q=大阪府" target="_blank" rel="noopener" class="map-link">Google マップで見る →</a>
+              <p>株式会社ライフケア</p>
+              <p class="map-address">長野市大字栗田2009番地 BBBビル3F</p>
+              <a href="https://maps.google.com/?q=長野市大字栗田2009" target="_blank" rel="noopener" class="map-link">Google マップで見る →</a>
             </div>
-            <!-- 実際の埋め込みコード例（下記コメントを外して使用）:
+            <!-- Google Maps 実際の埋め込みコード（差し替え用）:
             <iframe
               src="https://www.google.com/maps/embed?pb=..."
               width="100%" height="400" style="border:0;" allowfullscreen=""
@@ -557,41 +578,44 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-logo">
-          <span class="logo-mark">✦</span>
-          <div class="logo-text">
-            <span class="logo-main">きずな福祉会</span>
-            <span class="logo-sub">社会福祉法人</span>
+          <img src="images/logo.png" alt="LiFE CARE" class="footer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="footer-logo-fallback" style="display:none; align-items:center; gap:10px;">
+            <span class="logo-mark" style="color:#4DB6AC;">✦</span>
+            <div class="logo-text">
+              <span class="logo-main" style="color:#fff;">ライフケア</span>
+              <span class="logo-sub" style="color:rgba(255,255,255,0.5);">株式会社</span>
+            </div>
           </div>
         </div>
         <div class="footer-links">
           <ul>
             <li><a href="#about">私たちについて</a></li>
             <li><a href="#staff">職員紹介</a></li>
-            <li><a href="#message">理事長あいさつ</a></li>
+            <li><a href="#message">代表あいさつ</a></li>
             <li><a href="#office">事業所紹介</a></li>
             <li><a href="#access">アクセス</a></li>
             <li><a href="#contact">お問い合わせ</a></li>
           </ul>
         </div>
         <div class="footer-contact">
-          <a href="tel:0120-000-000" class="footer-tel">📞 0120-000-000</a>
+          <a href="tel:026-269-8740" class="footer-tel">📞 026-269-8740</a>
           <p class="footer-hours">電話受付：365日 8:00〜20:00</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="footer-address">〒000-0000 大阪府○○市△△町1丁目2番3号</p>
-        <p class="copyright">© 2024 社会福祉法人 きずな福祉会 All Rights Reserved.</p>
+        <p class="footer-address">〒380-0928 長野市大字栗田2009番地 BBBビル3F</p>
+        <p class="copyright">© 2024 株式会社ライフケア All Rights Reserved.</p>
       </div>
     </div>
   </footer>
 
   <!-- スマホ用フローティングバー -->
   <div class="floating-bar" id="floatingBar">
-    <a href="tel:0120-000-000" class="float-tel">
+    <a href="tel:026-269-8740" class="float-tel">
       <span class="float-icon">📞</span>
       <div>
-        <span class="float-label">無料電話相談</span>
-        <span class="float-num">0120-000-000</span>
+        <span class="float-label">お電話はこちら</span>
+        <span class="float-num">026-269-8740</span>
       </div>
     </a>
     <a href="#contact" class="float-reserve">
